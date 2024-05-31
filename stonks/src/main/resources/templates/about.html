@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stonks - About</title>
+    <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav><a href="/home">Home</a><br/><a href="/about">About</a><br/><a href="/game">Game</a></nav>
+    <p>Honestly, I don't know what this is.</p>
+    <p>Number of accounts created: <span id="nbAccounts" th:text="${accounts.size()}">0</span></p>
+    <ul th:if="${accounts.size() != 0}">Accounts:
+        <li th:each="account : ${accounts}"><a href="/user/0" th:href="@{/user/{id}(id=${account.id})}" th:text="|${account.username} (id ${account.id})|" target="_blank">username (id 0)</a></li>
+    </ul>
+</body>
+</html>

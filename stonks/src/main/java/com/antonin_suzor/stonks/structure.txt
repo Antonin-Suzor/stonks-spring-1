@@ -1,0 +1,5 @@
+repositories: contain data
+models: templates for data
+services: handle all logic
+entities: carry data between services and controllers
+controllers: gateway to the world
